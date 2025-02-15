@@ -1,0 +1,24 @@
+{
+  "name": "ai-driver.js",
+  "version": "1.0.3",
+  "type": "commonjs",
+  "scripts": {
+    "start": "tsc && node aiapi.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
+    "@google/generative-ai": "^0.21.0",
+    "ai-driver.js": "file:",
+    "fs-extra": "^11.3.0",
+    "openai": "^4.84.0",
+    "sudsjs": "file:",
+    "timers": "^0.1.1",
+    "track-n-trace": "^1.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.17",
+    "dotenv": "^16.4.7",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.0.0"
+  }
+}
