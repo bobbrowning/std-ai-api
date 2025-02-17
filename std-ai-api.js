@@ -86,9 +86,10 @@ function isRetryableError(error) {
  *
  * api makes api calls to an ai service
  *
- * @param config
- * @returns nothing at present
+ * @param {object} config
+ * @returns {object} resultObject}
  *
+ * See readme.md for details
  */
 async function api(config) {
     trace.log(config);
@@ -100,6 +101,9 @@ async function api(config) {
     let apiService = "gemini"; // Default to gemini
     if (config.apiService) {
         apiService = config.apiService;
+    }
+    if (apiService != "gemini" && apiService != "openai" && apiService != "claude") {
+        throw new Error('Invalid apiService');
     }
     /* Model to use */
     let modelName = ""; // Default to false 
@@ -246,4 +250,4 @@ async function api(config) {
     trace.log('returning', resultObject);
     return resultObject;
 }
-//# sourceMappingURL=ai-driver.js.map
+//# sourceMappingURL=std-ai-api.js.map

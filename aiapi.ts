@@ -1,6 +1,6 @@
 
 
-import { api } from "./ai-driver"
+import { api } from "./std-ai-api"
 const trace = require("track-n-trace")
 require('source-map-support/register')
 const fs = require('fs-extra')
@@ -8,11 +8,17 @@ const fs = require('fs-extra')
 
 async function main() {
         const config = {
-                apiService: "gemini",     // gemini,  openai or claude
-                json: true,               // question includes request for json
-                html: true,               // question includes request for html
-                model: "gemini-2.0-flash",
-                //model: "claude-3-5-sonnet-20241022",
+      //          silent: true,
+      //          apiService: "claude",     // gemini,  openai or claude
+      //          model: "claude-3-5-sonnet-20241022",
+
+      //          apiService: "gemini",
+      //          model: "gemini-2.0-flash",
+
+                apiService: "openai",
+                model: "gpt-4o-mini-2024-07-18",
+
+                
                 question: `Comprehensive list of name and city of suppliers of mud pumps. 
                 Include web page link if possible. 
                 Results as JSON and web page. 
@@ -22,10 +28,10 @@ async function main() {
                 Include in the web page the instructions and comments/reservations..
                 Include the number of suppliers found in the web page.`,
                 temperature: "0",           // openapi & claude only
-
+                max_tokens:"8000",
+ 
                 /* not implemented yet */
                 //top_p:"0.5",
-                //max_tokens:"100",
                 //n:"1",
                 //stop:"",
                 //freqency_penalty:"0",
@@ -40,16 +46,16 @@ async function main() {
                 await fs.writeFile('result.txt', result.content, { spaces: 2 })
 
 
-                if (config.json && result.json) {
+                if (result.json) {
                         console.log('writing json')
                         await fs.writeFile('result.json', result.json, { spaces: 2 })
                 }
-                if (config.html && result.html) {
+                if (result.html) {
                         console.log('writing html')
                         await fs.writeFile('result.html', result.html, { spaces: 2 })
                 }
-                if (config.json || config.json) {
-                        console.log('writing Connents (excluding any json or html)')
+                if (result.comments) {
+                        console.log('writing Comments (excluding any json or html)')
                         await fs.writeFile('result1.txt', result.comments, { spaces: 2 })
                 }
         } catch (e) {
