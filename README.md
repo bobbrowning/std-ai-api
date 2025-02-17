@@ -23,7 +23,10 @@ Config is an object  (example in aiapi.ts):
                 max_tokens:nnnn,
         }
         ```
-The  API key should be in the .env file.       
+The  API key should be in the .env file. The codes are 
+OPENAI_API_KEY      OpenAI
+GEMINI_API_KEY      Gemini
+ANTHROPIC_API_KEY   Claude     
         
 ## Results
 
