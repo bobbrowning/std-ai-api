@@ -23,6 +23,7 @@ Config is an object  (example in aiapi.ts):
                 max_tokens:nnnn,
         }
         ```
+The  API key should be in the .env file.       
         
 ## Results
 
