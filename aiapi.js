@@ -12,7 +12,7 @@ async function main() {
         //          apiService: "gemini",
         //          model: "gemini-2.0-flash",
         apiService: "openai",
-        model: "gpt-4o-mini-2024-07-18",
+        model: "gpt-4o-2024-08-06",
         question: `Comprehensive list of name and city of suppliers of mud pumps. 
                 Include web page link if possible. 
                 Results as JSON and web page. 
