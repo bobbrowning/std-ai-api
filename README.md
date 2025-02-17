@@ -29,9 +29,9 @@ The results are an object
 
 {
         content:  "[The results from the AI service]"
-        comments: '[The results with any formatted information removed]'
-        json: '[JSON data in on response as string]   // If any JSON
-        html: '[HTML data in on response as string]   // If any HTML
+        comments: "[The results with any formatted information removed]"
+        json: "[JSON data in response as string]"   // If any JSON
+        html: "[HTML data in response as string]"   // If any HTML
         etc
 }
 
