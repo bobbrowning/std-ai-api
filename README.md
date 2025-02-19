@@ -6,20 +6,24 @@
 
  Results are returned to the calling program as an object. 
 
-This is version 1 and as not been published to npm.
+This is version 1 and as not been published to npm. Yet to add other parameters such as  top_p, stop, freqency_penalty and so on.
+
+There is an example of its use in aiapi.js
+
+
 
 ## Calling sequence: 
   let result: any = await api(config)
 
-Config is an object  (example in aiapi.ts):  
+Config is an object:  
 
 ```
        const config = {
-                silent: true or false
-                apiService: "openai" or "gemini" or "claude"
-                model: "[model]",  
+                silent: true or false                         // Stop console progress messagesp
+                apiService: "[service]                        // "openai" or "gemini" or "claude"
+                model: "[model]",                             // depending on service
                 question: "[question/prompt]"                 
-                temperature: n,           // openapi & claude only
+                temperature: n,                               // openapi & claude only
                 max_tokens:nnnn,
         }
         ```
@@ -27,10 +31,11 @@ The  API key should be in the .env file. The codes are
 OPENAI_API_KEY      OpenAI
 GEMINI_API_KEY      Gemini
 ANTHROPIC_API_KEY   Claude     
-        
-## Results
 
-The results are an object
+## Results: 
+
+        The results are an object
+
 
 {
         content:  "[The results from the AI service]"
