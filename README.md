@@ -32,8 +32,18 @@ OPENAI_API_KEY      OpenAI
 GEMINI_API_KEY      Gemini
 ANTHROPIC_API_KEY   Claude     
 
-## Results: 
+## Results
 
+The results are an object:
+
+```typescript
+{
+        content:  string;    // The complete results from the AI service
+        comments: string;    // The results with any formatted information removed
+        json?: string;      // JSON data in response (if any)
+        html?: string;      // HTML data in response (if any)
+}
+```
         The results are an object
 
 
