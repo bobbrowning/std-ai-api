@@ -14,8 +14,10 @@ There is an example of its use in aiapi.ts
 
 ## Calling sequence: 
 
+```
   import { api } from "./std-ai-api"
   let result: any = await api(config)
+```
 
 Config is an object as follows:  
 
