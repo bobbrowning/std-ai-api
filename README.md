@@ -8,14 +8,16 @@
 
 This is version 1 and as not been published to npm. Yet to add other parameters such as  top_p, stop, freqency_penalty and so on.
 
-There is an example of its use in aiapi.js
+There is an example of its use in aiapi.ts
 
 
 
 ## Calling sequence: 
+
+  import { api } from "./std-ai-api"
   let result: any = await api(config)
 
-Config is an object:  
+Config is an object as follows:  
 
 ```
        const config = {
