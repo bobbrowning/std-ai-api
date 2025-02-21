@@ -32,9 +32,12 @@ Config is an object as follows:
         }
         ```
 The  API key should be in the .env file. The codes are 
+
+```
 OPENAI_API_KEY      OpenAI
 GEMINI_API_KEY      Gemini
 ANTHROPIC_API_KEY   Claude     
+```
 
 ## Results
 
@@ -50,7 +53,7 @@ The results are an object:
 ```
         The results are an object
 
-
+```
 {
         content:  "[The results from the AI service]"
         comments: "[The results with any formatted information removed]"
@@ -58,7 +61,7 @@ The results are an object:
         html: "[HTML data in response as string]"   // If any HTML
         etc
 }
-
+```
 
 
 
