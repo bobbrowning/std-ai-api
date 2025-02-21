@@ -30,7 +30,8 @@ Config is an object as follows:
                 temperature: n,                               // openapi & claude only
                 max_tokens:nnnn,
         }
-        ```
+```
+
 The  API key should be in the .env file. The codes are 
 
 ```
